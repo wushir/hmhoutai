@@ -50,7 +50,7 @@
             type="primary"
             icon="el-icon-edit"
             size="mini"
-             @click="showEditDialog(scope.row.cat_id)"
+             @click="showEditDialog(scope.row,scope.row.cat_id)"
             >编辑
           </el-button>
           <!-- 删除按钮 -->
@@ -58,7 +58,7 @@
             type="danger"
             icon="el-icon-delete"
             size="mini"
-            @click="removeRolesById(scope.row.cat_id)"
+            @click="removeRolesById(scope.row,scope.row.cat_id)"
             >删除</el-button
           >
         </template>
@@ -236,7 +236,7 @@ export default {
       this.total = res.data.total;
     },
      // 展示编辑角色的对话框
-    async showEditDialog(id) {
+    async showEditDialog(row,id) {
       // 根据 ID 查询用户信息
       const { data: res } = await this.$http.get("categories/" + id);
       console.log(res);
@@ -280,7 +280,7 @@ export default {
       });
     },
     // 根据id删除对应的角色信息
-    async removeRolesById(id) {
+    async removeRolesById(row,id) {
       console.log(id);
       //弹框提示
       const confirmResult = await this.$confirm(
