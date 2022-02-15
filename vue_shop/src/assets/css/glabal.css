@@ -1,0 +1,43 @@
+/* 全局样式表 */
+html,body,#app{
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    min-width: 1366px;
+}
+.el-breadcrumb{
+    margin-bottom: 15px;
+    font-size: 12px;
+}
+.el-card{
+    box-shadow: 0 1px 1px rgba(0,0,0, 0.15) !important;
+}
+.el-table{
+    margin-top: 15px;
+}
+.el-pagination{
+    margin-top: 15px;
+}
+.el-cascader-panel {
+    height: 250px;
+}
+
+.el-radio__inner {
+    border-radius: 0;
+    border: 0;
+    width: 170px;
+    height: 34px;
+    background-color: transparent;
+    cursor: pointer;
+    box-sizing: border-box;
+    position: absolute;
+    top: -18px;
+    left: -19px;
+}
+
+.el-radio__input.is-checked .el-radio__inner {
+    background: transparent;
+}
+.ql-editor{
+    min-height: 300px;
+}
